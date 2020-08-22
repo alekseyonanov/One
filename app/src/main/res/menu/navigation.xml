@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/sport"
+        android:icon="@drawable/ic_dumbbell"
+        android:title="Sport" />
+
+    <item
+        android:id="@+id/statistics"
+        android:icon="@drawable/ic_statistics"
+        android:title="Statistics" />
+
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_menu"
+        android:title="Menu" />
+
+</menu>

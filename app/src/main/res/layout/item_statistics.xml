@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/item_statistics_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22:42"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_statistics_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Бег поздно вечером"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_statistics_time" />
+
+    <TextView
+        android:id="@+id/item_statistics_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="7.22 км за 1 ч. 22 м."
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_statistics_title" />
+
+    <ImageView
+        android:id="@+id/item_statistics_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/ic_small_dot"
+        app:layout_constraintBottom_toBottomOf="@id/item_statistics_distance"
+        app:layout_constraintStart_toEndOf="@id/item_statistics_distance"
+        app:layout_constraintTop_toTopOf="@id/item_statistics_distance" />
+
+    <TextView
+        android:id="@+id/item_statistics_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="33%"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/item_statistics_dot"
+        app:layout_constraintTop_toBottomOf="@id/item_statistics_title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_background_dot"
+        android:scaleType="center"
+        android:src="@drawable/ic_dumbbell"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
