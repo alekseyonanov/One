@@ -1,8 +1,12 @@
-package ru.onanov.one
+package ru.onanov.one.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import ru.onanov.one.R
+import ru.onanov.one.fragment.MenuFragment
+import ru.onanov.one.fragment.SportFragment
+import ru.onanov.one.fragment.StatisticsFragment
 
 /**
  * @author Onanov Aleksey (@onanov)
@@ -40,6 +44,8 @@ class MainActivity : AppCompatActivity() {
             .add(R.id.framelayout, sportFragment)
             .commitAllowingStateLoss()
     }
-
-
+/*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        menuFragment.onActivityResult(requestCode,resultCode,data)
+    }*/
 }

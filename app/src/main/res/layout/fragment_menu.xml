@@ -30,7 +30,7 @@
         app:layout_constraintTop_toBottomOf="@id/fitnessGoalsTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/runGoal"
+        android:id="@+id/runGoalWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -38,17 +38,18 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:hint="Бег"
-        app:boxStrokeColor="@color/box_tint"
+        android:hint="@string/run"
+        app:boxStrokeColor="@color/run_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
-        app:layout_constraintEnd_toStartOf="@id/pushUpGoal"
+        app:hintTextColor="@color/run_box_tint"
+        app:layout_constraintEnd_toStartOf="@id/pushUpGoalWrap"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/runGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -58,7 +59,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/pushUpGoal"
+        android:id="@+id/pushUpGoalWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -66,17 +67,18 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:hint="Анжумания"
-        app:boxStrokeColor="@color/box_tint"
+        android:hint="@string/pushUp"
+        app:boxStrokeColor="@color/push_up_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
+        app:hintTextColor="@color/push_up_box_tint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/runGoal"
+        app:layout_constraintStart_toEndOf="@id/runGoalWrap"
         app:layout_constraintTop_toBottomOf="@id/divider">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pushUpGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -86,7 +88,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/squatGoal"
+        android:id="@+id/squatGoalWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -94,17 +96,18 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
-        android:hint="Приседания"
-        app:boxStrokeColor="@color/box_tint"
+        android:hint="@string/squat"
+        app:boxStrokeColor="@color/squat_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
-        app:layout_constraintEnd_toStartOf="@id/absGoal"
+        app:hintTextColor="@color/squat_box_tint"
+        app:layout_constraintEnd_toStartOf="@id/absGoalWrap"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/runGoal">
+        app:layout_constraintTop_toBottomOf="@id/runGoalWrap">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/squatGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -114,7 +117,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/absGoal"
+        android:id="@+id/absGoalWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -122,17 +125,18 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:hint="Пресс"
-        app:boxStrokeColor="@color/box_tint"
+        android:hint="@string/abs"
+        app:boxStrokeColor="@color/abs_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
+        app:hintTextColor="@color/abs_box_tint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/squatGoal"
-        app:layout_constraintTop_toBottomOf="@id/runGoal">
+        app:layout_constraintStart_toEndOf="@id/squatGoalWrap"
+        app:layout_constraintTop_toBottomOf="@id/runGoalWrap">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/absGoal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -150,7 +154,7 @@
         android:text="Ваши данные"
         android:textColor="#4a4e51"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/absGoal" />
+        app:layout_constraintTop_toBottomOf="@id/absGoalWrap" />
 
     <View
         android:id="@+id/divider1"
@@ -162,7 +166,7 @@
         app:layout_constraintTop_toBottomOf="@id/userDetailsTitle" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/gender"
+        android:id="@+id/genderWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -171,16 +175,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:hint="Пол"
-        app:boxStrokeColor="@color/box_tint"
+        app:boxStrokeColor="@color/default_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
-        app:layout_constraintEnd_toStartOf="@id/birthDate"
+        app:hintTextColor="@color/default_box_tint"
+        app:layout_constraintEnd_toStartOf="@id/birthDateWrap"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -190,7 +195,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/birthDate"
+        android:id="@+id/birthDateWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -199,16 +204,17 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:hint="День рождения"
-        app:boxStrokeColor="@color/box_tint"
+        app:boxStrokeColor="@color/default_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
+        app:hintTextColor="@color/default_box_tint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/gender"
+        app:layout_constraintStart_toEndOf="@id/genderWrap"
         app:layout_constraintTop_toBottomOf="@id/divider1">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/birthDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -218,7 +224,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/weight"
+        android:id="@+id/weightWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -227,16 +233,17 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="16dp"
         android:hint="Вес"
-        app:boxStrokeColor="@color/box_tint"
+        app:boxStrokeColor="@color/default_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
-        app:layout_constraintEnd_toStartOf="@id/height"
+        app:hintTextColor="@color/default_box_tint"
+        app:layout_constraintEnd_toStartOf="@id/heightWrap"
         app:layout_constraintHorizontal_weight="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender">
+        app:layout_constraintTop_toBottomOf="@id/genderWrap">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/weight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"
@@ -246,7 +253,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/height"
+        android:id="@+id/heightWrap"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -255,16 +262,17 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         android:hint="Рост"
-        app:boxStrokeColor="@color/box_tint"
+        app:boxStrokeColor="@color/default_box_tint"
         app:endIconDrawable="@drawable/ic_down_arrow"
         app:endIconMode="custom"
-        app:hintTextColor="@color/box_tint"
+        app:hintTextColor="@color/default_box_tint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toEndOf="@id/weight"
-        app:layout_constraintTop_toBottomOf="@id/gender">
+        app:layout_constraintStart_toEndOf="@id/weightWrap"
+        app:layout_constraintTop_toBottomOf="@id/genderWrap">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/height"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:editable="false"

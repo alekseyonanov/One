@@ -1,9 +1,10 @@
-package ru.onanov.one
+package ru.onanov.one.fragment
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import ru.onanov.one.R
 
 /**
  * @author Onanov Aleksey (@onanov)
