@@ -4,10 +4,10 @@
     <item android:drawable="@color/colorPrimary" />
     <item
         android:bottom="128dp"
+        android:drawable="@drawable/ic_applogo"
+        android:gravity="center" />
+    <item
+        android:bottom="128dp"
         android:drawable="@drawable/ic_madebyonanov"
         android:gravity="bottom|center_horizontal" />
-    <!--    <item
-            android:bottom="128dp"
-            android:drawable="@drawable/ic_applogo"
-            android:gravity="center" />-->
 </layer-list>

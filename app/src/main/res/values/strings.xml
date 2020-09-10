@@ -19,4 +19,21 @@
     <string name="mile">миль</string>
 
     <string name="unit">раз</string>
+
+    <!--IntroductionFragment-->
+    <string name="next">Далее</string>
+    <string name="skip">Готово</string>
+
+    <string-array name="intro_titles">
+        <item>Добро пожаловать в Даты</item>
+        <item>2 вида дат</item>
+        <item>Все нужные исторические термины</item>
+    </string-array>
+
+    <string-array name="intro_descriptions">
+        <item>Уникальное приложение для изучения дат и терминов.</item>
+        <item>Режимы Стандартный и Необходимый минимум отлично подойдут для разных целей обучения.</item>
+        <item>515 терминов на все случаи жизни.</item>
+    </string-array>
+
 </resources>

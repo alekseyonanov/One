@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_sport.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import ru.onanov.one.R
+import ru.onanov.one.activity.MainActivity
 import ru.onanov.one.data.Loader
 import ru.onanov.one.data.model.Goal
 import ru.onanov.one.data.model.Result
@@ -52,6 +53,8 @@ class SportFragment : Fragment() {
         pushUpResultNumber.text = result.pushUp.toString()
         squatResultNumber.text = result.squat.toString()
         absResultNumber.text = result.abs.toString()
+
+        (activity as MainActivity).setNavigationVisible()
     }
 
     override fun onCreateView(

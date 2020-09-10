@@ -1,9 +1,11 @@
 package ru.onanov.one.activity
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import ru.onanov.one.R
+import ru.onanov.one.fragment.IntroductionFragment
 import ru.onanov.one.fragment.MenuFragment
 import ru.onanov.one.fragment.SportFragment
 import ru.onanov.one.fragment.StatisticsFragment
@@ -41,8 +43,19 @@ class MainActivity : AppCompatActivity() {
 
         supportFragmentManager
             .beginTransaction()
-            .add(R.id.framelayout, sportFragment)
+            .add(
+                R.id.framelayout,
+                //if (Loader.isFirstStart(this)) {
+                    IntroductionFragment.newInstance()
+                //} else {
+                //    sportFragment
+                //}
+            )
             .commitAllowingStateLoss()
+    }
+
+    fun setNavigationVisible(){
+        navigation.visibility = View.VISIBLE
     }
 /*    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
